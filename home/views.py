@@ -10,9 +10,7 @@ def administrator(request):
 def doctors(request):
     return render(request, 'doctors.html')
 
-def patients(request):
-    return render(request, 'patients.html')
-
+#from contacts
 def patient(request):
     if request.method == "POST":
         name = request.POST['name']

@@ -1,6 +1,6 @@
 from django.db import models
 # Create your models here.
-#here
+#here m
 class Patient(models.Model):
     name = models.CharField(max_length=30)
     dob = models.CharField(max_length=30)
