@@ -31,10 +31,7 @@
         <a class="nav-link" href="/doctors">Doctors</a>
       </li>
       <li class="nav-item active">
-        <a class="nav-link" href="/patients">Patients</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="/contact">Contact</a>
+        <a class="nav-link" href="/patient">Patient</a>
       </li>
 
     </ul>
@@ -45,23 +42,86 @@
   </div>
 </nav>
 
-<div class="alert alert-light mb-0 " role="alert" style="text-align:center">
-  <strong>Hey Patient!</strong>
-</div>
-
-
 <style>
 body {
   background-image: url("/static/back.png");
   background-size: 100% 100%;
 }
 </style>
-<footer class="py-3">
-    <p class="text-center">
-      Contains patient login details
-    </p>
- </footer>
 
+<div class="container">
+  <h1 class="text-center my-3">APPOINTMENT FORM</h1>
+  <form action ="/patient" method="post">
+  {% csrf_token %}
+<br>
+<strong class="py-2 my-1">PERSONAL DETAILS</strong>
+<div class="form-row">
+    <div class="col-4">
+      <label for="name">Name</label>
+      <input type="text" class="form-control" placeholder="Enter your full name">
+    </div>
+    <div class="col-2">
+      <label for="name">Date of Birth</label>
+      <input type="text" class="form-control" placeholder="dd-mm-yyyy">
+    </div>
+    <div class="col-2">
+      <label for="name">Age</label>
+      <input type="text" class="form-control" placeholder="Age">
+    </div>
+    <div class="col-4">
+      <label for="name">Gender</label>
+      <input type="text" class="form-control" placeholder="Male/Female/Others">
+    </div>
+</div>
+<br>
+<strong class=" my-1">CONTACT DETAILS</strong>
+<div class="form-row">
+    <div class="col-4">
+      <label for="name">Contact no</label>
+      <input type="text" class="form-control" placeholder="+91">
+    </div>
+    <div class="col-4">
+      <label for="name">Email</label>
+      <input type="text" class="form-control" placeholder="name@gmail.com">
+    </div>
+    <div class="col-4">
+      <label for="name">Address</label>
+      <input type="text" class="form-control" placeholder="House/Flat name, Area">
+    </div>
+</div>
+<br>
+<strong class="py-2 my-1">APPOINTMENT DETAILS</strong>
+<div class="form-row">
+    <div class="col-4">
+    <label for="exampleFormControlSelect1">Choose Doctor</label>
+    <select class="form-control" id="exampleFormControlSelect1" >
+      <option><br></option>
+      <option>Dr. Name | Paediatrician</option>
+      <option>Dr. Name | Cardiologist</option>
+      <option>Dr. Name | Orthopedic Surgeon</option>
+      <option>Dr. Name | Physician</option>
+      <option>Dr. Name | Dermatologist</option>
+    </select>
+  </div>
+  <div class="col-8">
+      <label for="name">Description</label>
+      <input type="text" class="form-control" placeholder="Reason for visit">
+    </div>
+</div>
+<br>
+<form>
+    <button type="submit" class="btn btn-success">Submit</button>
+    </form>
+</form>
+</div>
+
+
+</div>
+<footer class="py-3 position-absolute fixed-bottom">
+    <p class="text-center py-2 my-0">
+      Abc hospital|palce, etc.
+    </p>
+  </footer>
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
