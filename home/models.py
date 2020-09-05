@@ -1,9 +1,12 @@
 from django.db import models
 # Create your models here.
-class Contact(models.Model):
+class Patient(models.Model):
     name = models.CharField(max_length=30)
-    phone = models.CharField(max_length=30)
+    dob = models.CharField(max_length=30)
+    age = models.TextField()
+    gender = models.TextField()
+    contact = models.TextField()
     email = models.EmailField()
-    query = models.TextField()
+    address = models.TextField()
 def _str_(self):
-    return self.name+ ""+self.email
+    return self.name+ ""+self.gender
