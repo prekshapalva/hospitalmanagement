@@ -20,10 +20,15 @@ def patient(request):
         email = request.POST['email']
         contact = request.POST['contact']
         address = request.POST['address']
-        #print(name,phone,email_id,query)
-        ins = Patient(name=name, dob=dob, age=age ,gender=gender , email=email , contact=contact, address=address)
+        doctor = request.POST['doctor']
+        desc = request.POST['desc']
+        date = request.POST['date']
+        time = request.POST['time']
+        #print(name,dob,age,gender)
+        ins = Patient(name=name, dob=dob, age=age, gender=gender, email=email, contact=contact, address=address,
+                      desc=desc, doctor=doctor, date=date, time=time)
         ins.save()
         print ("The data is submitted to the database")
-    #return HttpResponse("Contact Page(/contact)")
+        #return HttpResponse("Contact Page(/contact)")
     return render(request, 'patient.html')
 
