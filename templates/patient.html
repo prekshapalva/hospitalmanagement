@@ -28,7 +28,7 @@
         <a class="nav-link" href="/administrator">Admin <span class="sr-only">(current)</span></a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="/doctors">Doctors</a>
+        <a class="nav-link" href="/doctors">Doctor</a>
       </li>
       <li class="nav-item active">
         <a class="nav-link" href="/patient">Patient</a>
@@ -53,7 +53,7 @@ body {
 
 <div class="container">
     <h1 class="text-center my-3"> <b>APPOINTMENT REQUEST</b> </h1>
-  <form action ="/patient" method="post">
+<form action ="/patient" method="post">
   {% csrf_token %}
 <br>
 <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-person-fill" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
@@ -63,19 +63,19 @@ body {
 <div class="form-row">
     <div class="col-4">
       <label for="name">Name</label>
-      <input type="text" class="form-control" placeholder="Enter your full name">
+      <input type="text" class="form-control" id="name" name="name" placeholder="Enter your full name">
     </div>
     <div class="col-2">
-      <label for="name">Date of Birth</label>
-      <input type="text" class="form-control" placeholder="dd-mm-yyyy">
+      <label for="dob">Date of Birth</label>
+      <input type="text" class="form-control" id="dob" name="dob" placeholder="dd-mm-yyyy">
     </div>
     <div class="col-2">
-      <label for="name">Age</label>
-      <input type="text" class="form-control" placeholder="Age">
+      <label for="age">Age</label>
+      <input type="text" class="form-control" id="age" name="age"  placeholder="Age">
     </div>
     <div class="col-4">
-      <label for="name">Gender</label>
-      <input type="text" class="form-control" placeholder="Male/Female/Others">
+      <label for="gender">Gender</label>
+      <input type="text" class="form-control" id="gender" name="gender"  placeholder="Male/Female/Others">
     </div>
 </div>
 <br>
@@ -85,16 +85,16 @@ body {
 <strong class=" my-1">| CONTACT DETAILS</strong>
 <div class="form-row">
     <div class="col-4">
-      <label for="name">Contact no</label>
-      <input type="text" class="form-control" placeholder="+91">
+      <label for="contact">Contact no</label>
+      <input type="text" class="form-control" id="contact" name="contact" placeholder="+91">
     </div>
     <div class="col-4">
-      <label for="name">Email</label>
-      <input type="text" class="form-control" placeholder="name@gmail.com">
+      <label for="email">Email</label>
+      <input type="text" class="form-control" id="email" name="email" placeholder="name@gmail.com">
     </div>
     <div class="col-4">
-      <label for="name">Address</label>
-      <input type="text" class="form-control" placeholder="House/Flat name, Area">
+      <label for="address">Address</label>
+      <input type="text" class="form-control" id="address" name="address" placeholder="House/Flat name, Area">
     </div>
 </div>
 <br>
@@ -104,19 +104,12 @@ body {
 <strong class="py-2 my-1">| APPOINTMENT DETAILS</strong>
 <div class="form-row">
     <div class="col-6">
-    <label for="exampleFormControlSelect1">Choose Doctor</label>
-    <select class="form-control" id="exampleFormControlSelect1" >
-      <option><br></option>
-      <option>Dr. Name | Paediatrician</option>
-      <option>Dr. Name | Cardiologist</option>
-      <option>Dr. Name | Orthopedic Surgeon</option>
-      <option>Dr. Name | Physician</option>
-      <option>Dr. Name | Dermatologist</option>
-    </select>
-  </div>
+      <label for="doctor">Doctor</label>
+      <input type="text" class="form-control" id="doctor" name="doctor" placeholder="Dr.Name">
+    </div>
   <div class="col-6 ">
-      <label for="name">Description</label>
-      <input type="text" class="form-control" placeholder="Reason for visit">
+      <label for="desc">Description</label>
+      <input type="text" class="form-control" id="desc" name="desc" placeholder="Reason for visit">
   </div>
 </div>
 <br>
@@ -125,52 +118,28 @@ body {
 </svg>
 <strong class="py-2 my-1">| DATE AND TIME</strong>
 <div class="form-row">
-    <div class="col-2">
-    <label for="exampleFormControlSelect1">Day</label>
-    <select class="form-control" id="exampleFormControlSelect1" >
-      <option><br></option>
-      <option>1</option>
-      <option>2</option>
-      <option>3</option>
-    </select>
+    <div class="col-6 ">
+      <label for="date">Date</label>
+      <input type="date" class="form-control" id="date" name="date" placeholder="">
   </div>
-  <div class="col-2">
-    <label for="exampleFormControlSelect1">Month</label>
-    <select class="form-control" id="exampleFormControlSelect1" >
-      <option><br></option>
-      <option>January</option>
-      <option>Feburay</option>
-      <option>March</option>
-      <option>April</option>
-    </select>
-  </div>
-  <div class="col-2">
-    <label for="exampleFormControlSelect1">Year</label>
-    <select class="form-control" id="exampleFormControlSelect1" >
-      <option><br></option>
-      <option>2020</option>
-      <option>2021</option>
-      <option>2022</option>
-      <option>2023</option>
-    </select>
-  </div>
-</div>
-<br>
-<br>
-<br>
-
-<form>
-    <div class="card-body text-center">
-    <a href="" class="btn btn-secondary btn-lg">SUBMIT</a>
+    <div class="col-6 ">
+      <label for="time">Time</label>
+      <input type="time" class="form-control" id="time" name="time" placeholder="">
     </div>
-</form>
+</div>
+<br>
+<br>
+<br>
+<div class="card-body text-center">
+<button type="submit" class="btn btn-secondary btn-lg">Submit</button>
+</div>
+
 </form>
 </div>
 <br>
 <br>
 <br>
 
-</div>
 
 
     <!-- Optional JavaScript -->
