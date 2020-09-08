@@ -24,13 +24,13 @@
       <li class="nav-item ">
         <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
       </li>
-      <li class="nav-item active">
+      <li class="nav-item ">
         <a class="nav-link" href="/administrator">Admin <span class="sr-only">(current)</span></a>
       </li>
-      <li class="nav-item ">
+      <li class="nav-item">
         <a class="nav-link" href="/doctors">Doctor</a>
       </li>
-      <li class="nav-item">
+      <li class="nav-item active">
         <a class="nav-link" href="/patient_main">Patient</a>
       </li>
 
@@ -51,8 +51,8 @@ body {
 </style>
 <div class="container">
   <br>
-    <h1 class="text-center my-3"> <b>HEY ADMIN !</b> </h1>
-  <h2 class="text-center my-3"> </h2>
+    <h1 class="text-center my-3"> <b>HEY &nbspPATIENT !</b> </h1>
+  <h2 class="text-center my-5"> </h2>
 </div>
 <html>
 <head>
@@ -61,12 +61,12 @@ body {
   background-color: #4CAF50; /* Green */
   border: none;
   color: white;
-  padding: 10px 40px;
+  padding: 15px 30px;
   text-align: center;
   text-decoration: none;
   display: inline;
-  font-size: 25px;
-  margin: 30px 630px;
+  font-size: 31px;
+  margin: 50px 530px;
   cursor: pointer;
   -webkit-transition-duration: 0.4s; /* Safari */
   transition-duration: 0.4s;
@@ -78,25 +78,16 @@ body {
 </head>
 <body>
 
-<a href="/admin/"><button class="button button1">&nbsp DASHBOARD &nbsp<br> <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-person-bounding-box" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-  <path fill-rule="evenodd" d="M1.5 1a.5.5 0 0 0-.5.5v3a.5.5 0 0 1-1 0v-3A1.5 1.5 0 0 1 1.5 0h3a.5.5 0 0 1 0 1h-3zM11 .5a.5.5 0 0 1 .5-.5h3A1.5 1.5 0 0 1 16 1.5v3a.5.5 0 0 1-1 0v-3a.5.5 0 0 0-.5-.5h-3a.5.5 0 0 1-.5-.5zM.5 11a.5.5 0 0 1 .5.5v3a.5.5 0 0 0 .5.5h3a.5.5 0 0 1 0 1h-3A1.5 1.5 0 0 1 0 14.5v-3a.5.5 0 0 1 .5-.5zm15 0a.5.5 0 0 1 .5.5v3a1.5 1.5 0 0 1-1.5 1.5h-3a.5.5 0 0 1 0-1h3a.5.5 0 0 0 .5-.5v-3a.5.5 0 0 1 .5-.5z"/>
-  <path fill-rule="evenodd" d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H3zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/>
+<a href="/patient"><button class="button button1">NEW PATIENT- REGISTRATION<br><svg width="1em" height="1em"
+                                                                                    viewBox="0 0 16 16" class="bi bi-person-plus-fill" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+  <path fill-rule="evenodd" d="M1 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H1zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm7.5-3a.5.5 0 0 1 .5.5V7h1.5a.5.5 0 0 1 0 1H14v1.5a.5.5 0 0 1-1 0V8h-1.5a.5.5 0 0 1 0-1H13V5.5a.5.5 0 0 1 .5-.5z"/>
 </svg></button>
 </a>
 <br>
 
-<a href="/add_doctor_by_admin"><button class="button button1">ADD DOCTORS<br><svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-person-plus-fill" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-  <path fill-rule="evenodd" d="M1 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H1zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm7.5-3a.5.5 0 0 1 .5.5V7h1.5a.5.5 0 0 1 0 1H14v1.5a.5.5 0 0 1-1 0V8h-1.5a.5.5 0 0 1 0-1H13V5.5a.5.5 0 0 1 .5-.5z"/>
-</svg></button>
-</a>
-
-<a href="/admin/home/doctor/"><button class="button button1">VIEW DOCTORS<br><svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-person-lines-fill" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-  <path fill-rule="evenodd" d="M1 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H1zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm7 1.5a.5.5 0 0 1 .5-.5h2a.5.5 0 0 1 0 1h-2a.5.5 0 0 1-.5-.5zm-2-3a.5.5 0 0 1 .5-.5h4a.5.5 0 0 1 0 1h-4a.5.5 0 0 1-.5-.5zm0-3a.5.5 0 0 1 .5-.5h4a.5.5 0 0 1 0 1h-4a.5.5 0 0 1-.5-.5zm2 9a.5.5 0 0 1 .5-.5h2a.5.5 0 0 1 0 1h-2a.5.5 0 0 1-.5-.5z"/>
-</svg></button>
-</a>
-
-<a href="/admin/home/patient/"><button class="button button1">VIEW PATIENTS<br><svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-people-fill" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-  <path fill-rule="evenodd" d="M7 14s-1 0-1-1 1-4 5-4 5 3 5 4-1 1-1 1H7zm4-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm-5.784 6A2.238 2.238 0 0 1 5 13c0-1.355.68-2.75 1.936-3.72A6.325 6.325 0 0 0 5 9c-4 0-5 3-5 4s1 1 1 1h4.216zM4.5 8a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5z"/>
+<a href=".."><button class="button button1">APPROVED&nbsp PATIENT- LOGIN &nbsp<br><svg width="1em" height="1em"
+                                                                                         viewBox="0 0 16 16" class="bi bi-person-check-fill" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+  <path fill-rule="evenodd" d="M1 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H1zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm9.854-2.854a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708 0l-1.5-1.5a.5.5 0 0 1 .708-.708L12.5 7.793l2.646-2.647a.5.5 0 0 1 .708 0z"/>
 </svg></button>
 </a>
 </body>
