@@ -6,11 +6,12 @@ Contents (As of now):
                   Patient (done);
                 
 2.Admin - Admin dashboard (done);
-          Doctor details table;
+          Add doctors (done);
+          Doctor details table (done);
           Patient details table (done);
           
-3.Doctor - Schedule details table;
-           Prescription details;
+3.Doctor - New doctor form(done);
+           Doctor login to view details (pending);
 
 4.Patient - Appointment form (done);
             Patient login to view status (pending);
