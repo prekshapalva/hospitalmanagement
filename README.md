@@ -1,6 +1,7 @@
 Hospital management system
 
 Contents (As of now):
+
 1.Home page has - Admin (done);
                   Doctor (done);
                   Patient (done);
