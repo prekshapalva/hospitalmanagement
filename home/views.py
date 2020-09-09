@@ -13,6 +13,7 @@ def doctors(request):
 def patient_main(request):
     return render(request, 'patient_main.html')
 
+
 #from contacts
 def patient(request):
     if request.method == "POST":
