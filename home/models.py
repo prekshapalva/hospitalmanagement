@@ -28,8 +28,8 @@ class Doctor(models.Model):
     doc_contact = models.CharField(max_length=30)
     doc_email = models.EmailField()
     doc_address = models.CharField(max_length=100)
-    doc_degree = models.CharField(max_length=30, null=True)
-    doc_desc = models.CharField(max_length=200, null=True)
+    doc_degree = models.CharField(max_length=300)
+    doc_desc = models.CharField(max_length=200)
 
     def __str__(self):
-       return self.doc_degree
+       return self.doc_name

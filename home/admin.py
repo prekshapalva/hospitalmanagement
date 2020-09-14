@@ -14,7 +14,7 @@ admin.site.register(Patient, AdminPatient)
 #Doctor table
 class AdminDoctor(admin.ModelAdmin):
     model = Doctor
-    list_display = ('doc_name','doc_age','doc_gender','doc_dob','doc_contact','doc_email','doc_desc')
+    list_display = ('doc_name','doc_age','doc_degree','doc_gender','doc_dob','doc_contact','doc_email','doc_desc')
     list_filter = ("doc_name","doc_age")
 admin.site.register(Doctor, AdminDoctor)
 
