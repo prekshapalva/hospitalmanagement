@@ -3,8 +3,9 @@ from django.shortcuts import render, redirect
 from django.contrib.auth.forms import UserCreationForm
 from home.forms import CreateUserForm
 from django.contrib import messages
-from django.contrib.auth import authenticate, login, logout
-# Create your views here.
+from django.contrib.auth import authenticate, login
+
+# About, Admin, Doctor and Patient page view
 def about(request):
     return render(request, 'about.html')
 def administrator(request):
@@ -13,9 +14,8 @@ def doctors(request):
     return render(request, 'doctors.html')
 def patient_main(request):
     return render(request, 'patient_main.html')
-def patient_login(request):
-    return render(request, 'patient_login.html')
 
+# Patient list (all appointments)
 def patient(request):
     if request.method == "POST":
         name = request.POST['name']
@@ -36,6 +36,7 @@ def patient(request):
         print("The data is submitted to the database")
         # return HttpResponse("Contact Page(/contact)")
     return render(request, 'patient.html')
+# Doctor details
 def add_doctor_by_admin(request):
     if request.method == "POST":
         doc_name = request.POST['doc_name']
@@ -56,6 +57,7 @@ def add_doctor_by_admin(request):
         # return HttpResponse("Contact Page(/contact)")
     return render(request, 'add_doctor_by_admin.html')
 
+# Register form for the new doctor (by admin)
 def registerPage(request):
     form = CreateUserForm()
     if request.method == 'POST':
@@ -67,6 +69,7 @@ def registerPage(request):
             return redirect('login')
     context={'form': form}
     return render(request, 'register.html', context)
+# Login for the new doctor after getting registered by admin
 def loginPage(request):
     if request.method == 'POST':
         username = request.POST.get('username')

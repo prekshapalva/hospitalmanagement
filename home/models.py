@@ -1,8 +1,6 @@
 from django.db import models
 
-
-# Create your models here.
-# here m
+# Model for Patient (appointment)
 class Patient(models.Model):
     name = models.CharField(max_length=30)
     dob = models.CharField(max_length=30)
@@ -15,11 +13,10 @@ class Patient(models.Model):
     desc = models.CharField(max_length=200, null=True)
     date = models.DateField(default="", editable=False)
     time = models.TimeField(default="", editable=False)
-
-    def __str__(self):
+def __str__(self):
        return self.name
-# return f"Date:{self.date} | Time:{self.time} | Doctor:{self.doctor} | Patient:{self.name} | " \
-               #f"Contact:{self.contact}"
+
+# Model for Doctor (details)
 class Doctor(models.Model):
     doc_name = models.CharField(max_length=30)
     doc_dob = models.CharField(max_length=30)
@@ -30,6 +27,5 @@ class Doctor(models.Model):
     doc_address = models.CharField(max_length=100)
     doc_degree = models.CharField(max_length=300)
     doc_desc = models.CharField(max_length=200)
-
-    def __str__(self):
+def __str__(self):
        return self.doc_name

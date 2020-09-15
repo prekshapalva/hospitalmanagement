@@ -3,12 +3,13 @@ from django.urls import path
 from home import views
 from django.conf.urls import url
 from . import views
+
 # Django admin customization
-#check admin site prekshaa
-admin.site.site_title = "Admin site"
+admin.site.site_title = "Admin site for Hospital Management"
 admin.site.site_header = "Hopitalmanagement - Admin Dashboard"
 admin.site.index_title = "Hopitalmanagement - Admin Dashboard"
 
+# Paths for each attribute
 urlpatterns = [
     path('', views.about, name='about'),
     path('administrator', views.administrator, name='administrator'),
