@@ -67,7 +67,7 @@ body {
     </div>
     <div class="col-2">
       <label for="dob">Date of Birth</label>
-      <input type="text" class="form-control" id="dob" name="dob" placeholder="dd-mm-yyyy">
+      <input type="date" class="form-control" id="dob" name="dob" placeholder="dd-mm-yyyy">
     </div>
     <div class="col-2">
       <label for="age">Age</label>
@@ -105,7 +105,19 @@ body {
 <div class="form-row">
     <div class="col-6">
       <label for="doctor">Doctor</label>
-      <input type="text" class="form-control" id="doctor" name="doctor" placeholder="Dr.Name">
+        <input type="text" class="form-control" name="doctor" list="doctor" placeholder="Choose doctor">
+    <datalist id="doctor">
+      <option value="Dr Name1 | Cardiologist">
+      <option value="Dr Name2 | Pediatrician">
+      <option value="Dr Name3 | General Physician">
+      <option value="Dr Name4 | Orthopaedic Surgeon">
+      <option value="Dr Name5 | Dermatologist">
+      <option value="Dr Name6 | Gynecologist">
+      <option value="Dr Name7 | Dermatologist">
+      <option value="Dr Name8 | Ophthalmologists">
+      <option value="Dr Name9 | Neurologists">
+      <option value="Dr Name10 | Dentist">
+    </datalist>
     </div>
   <div class="col-6 ">
       <label for="desc">Description</label>
@@ -120,11 +132,11 @@ body {
 <div class="form-row">
     <div class="col-6 ">
       <label for="date">Date</label>
-      <input type="date" class="form-control" id="date" name="date" placeholder="">
+      <input type="date" class="form-control" id="date" name="date" placeholder="dd-mm-yyy">
   </div>
     <div class="col-6 ">
       <label for="time">Time</label>
-      <input type="time" class="form-control" id="time" name="time" placeholder="">
+      <input type="time" class="form-control" id="time" name="time" placeholder="time">
     </div>
 </div>
 <br>
