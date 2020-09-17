@@ -3,7 +3,7 @@ from django.db import models
 # Model for Patient (appointment)
 class Patient(models.Model):
     name = models.CharField(max_length=30)
-    dob = models.CharField(max_length=30)
+    dob = models.DateField(default="", editable=False)
     age = models.CharField(max_length=30)
     gender = models.CharField(max_length=30)
     contact = models.CharField(max_length=30)
@@ -18,6 +18,7 @@ def __str__(self):
 
 # Model for Doctor (details)
 class Doctor(models.Model):
+    image = models.URLField()
     doc_name = models.CharField(max_length=30)
     doc_dob = models.CharField(max_length=30)
     doc_age = models.CharField(max_length=30)
@@ -27,5 +28,6 @@ class Doctor(models.Model):
     doc_address = models.CharField(max_length=100)
     doc_degree = models.CharField(max_length=300)
     doc_desc = models.CharField(max_length=200)
+
 def __str__(self):
        return self.doc_name
