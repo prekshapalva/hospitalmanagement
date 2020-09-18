@@ -13,12 +13,13 @@ class Patient(models.Model):
     desc = models.CharField(max_length=200, null=True)
     date = models.DateField(default="", editable=False)
     time = models.TimeField(default="", editable=False)
+    status = models.CharField(max_length=500)
+    prescription = models.CharField(max_length=500)
 def __str__(self):
        return self.name
 
 # Model for Doctor (details)
 class Doctor(models.Model):
-    image = models.URLField()
     doc_name = models.CharField(max_length=30)
     doc_dob = models.CharField(max_length=30)
     doc_age = models.CharField(max_length=30)
