@@ -4,7 +4,8 @@ from django.contrib.auth.forms import UserCreationForm
 from home.forms import CreateUserForm
 from django.contrib import messages
 from django.contrib.auth import authenticate, login
-
+from django.core.mail import send_mail
+from django.conf import settings
 # About, Admin, Doctor and Patient page view
 def about(request):
     return render(request, 'about.html')
@@ -65,10 +66,17 @@ def registerPage(request):
         if form.is_valid():
             form.save()
             user = form.cleaned_data.get('username')
+            subject = 'Patient login details'
+            messsage = ' Message '
+            from_email = settings.EMAIL_HOST_USER
+            to_email = [from_email]
+            send_mail(subject, messsage, from_email, to_email, fail_silently=True)
             messages.success(request, 'Account was created for '+ user )
+
             return redirect('login')
     context={'form': form}
     return render(request, 'register.html', context)
+
 # Login for the new doctor after getting registered by admin
 def loginPage(request):
     if request.method == 'POST':
