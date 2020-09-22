@@ -69,7 +69,7 @@ def registerPage(request):
             subject = 'Patient login details'
             messsage = ' Message '
             from_email = settings.EMAIL_HOST_USER
-            to_email = [from_email]
+            to_email = [' ']
             send_mail(subject, messsage, from_email, to_email, fail_silently=True)
             messages.success(request, 'Account was created for '+ user )
 
