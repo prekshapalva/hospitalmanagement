@@ -6,6 +6,7 @@ from django.contrib import messages
 from django.contrib.auth import authenticate, login
 from django.core.mail import send_mail
 from django.conf import settings
+
 # About, Admin, Doctor and Patient page view
 def about(request):
     return render(request, 'about.html')
@@ -66,11 +67,15 @@ def registerPage(request):
         if form.is_valid():
             form.save()
             user = form.cleaned_data.get('username')
-            subject = 'Patient login details'
-            messsage = ' Message '
-            from_email = settings.EMAIL_HOST_USER
-            to_email = [' ']
-            send_mail(subject, messsage, from_email, to_email, fail_silently=True)
+            email = form.cleaned_data.get('email')
+            password = form.cleaned_data.get('password1')
+
+            send_mail('Patient login details',
+                      'Your appointment request is accepted \n\nLogin credentials:\nUsername - '
+                      +user+ '\nPassword - '+password+ '\n\n\nThank you',
+                      settings.EMAIL_HOST_USER,
+                      [form.cleaned_data.get('email')],
+                      fail_silently=False)
             messages.success(request, 'Account was created for '+ user )
 
             return redirect('login')
