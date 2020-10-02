@@ -14,11 +14,15 @@ def administrator(request):
     return render(request, 'administrator.html')
 def doctors(request):
     return render(request, 'doctors.html')
-def patient_main(request):
-    return render(request, 'patient_main.html')
+def patient(request):
+    return render(request, 'patient.html')
+def patient_p1(request):
+    return render(request, 'patient_p1.html')
+def payment(request):
+    return render(request, 'payment.html')
 
 # Patient list (all appointments)
-def patient(request):
+def patient_appointment(request):
     if request.method == "POST":
         name = request.POST['name']
         dob = request.POST['dob']
@@ -37,9 +41,9 @@ def patient(request):
         ins.save()
         print("The data is submitted to the database")
         # return HttpResponse("Contact Page(/contact)")
-    return render(request, 'patient.html')
+    return render(request, 'patient_appointment.html')
 # Doctor details
-def add_doctor_by_admin(request):
+def add_doctor(request):
     if request.method == "POST":
         doc_name = request.POST['doc_name']
         doc_dob = request.POST['doc_dob']
@@ -57,7 +61,7 @@ def add_doctor_by_admin(request):
         ins.save()
         print("The data is submitted to the database")
         # return HttpResponse("Contact Page(/contact)")
-    return render(request, 'add_doctor_by_admin.html')
+    return render(request, 'add_doctor.html')
 
 # Register form for the new doctor (by admin)
 def registerPage(request):
