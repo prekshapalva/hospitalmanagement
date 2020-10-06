@@ -95,6 +95,8 @@ def loginPage(request):
         if user is not None:
             login(request, user)
             return redirect('admin/home/patient/')
+            #return redirect('admin/home/patient/+self.name')
+
         else:
             messages.info(request, 'Username or password is incorrect')
     context={}

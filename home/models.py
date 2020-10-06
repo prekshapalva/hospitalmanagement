@@ -14,9 +14,11 @@ class Patient(models.Model):
     date = models.DateField(default="", editable=False)
     time = models.TimeField(default="", editable=False)
     status = models.CharField(max_length=500)
-    prescription = models.CharField(max_length=500)
-def __str__(self):
-       return self.name
+    details = models.TextField(max_length=1024 * 2, default="Date:\nReason for visit:\nPrescription:\nTests:\nSummary:\nNext visit:")
+
+    def __str__(self):
+        return str(self.name)
+        #return self.name
 
 # Model for Doctor (details)
 class Doctor(models.Model):
@@ -30,5 +32,8 @@ class Doctor(models.Model):
     doc_degree = models.CharField(max_length=300)
     doc_desc = models.CharField(max_length=200)
 
-def __str__(self):
-       return self.doc_name
+    def __str__(self):
+        return str(self.doc_name)
+
+    #def __str__(self):
+        #return self.doc_name

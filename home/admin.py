@@ -6,7 +6,7 @@ from django.contrib.auth.admin import UserAdmin
 # Patient table
 class AdminPatient(admin.ModelAdmin):
     model = Patient
-    list_display = ('date','time','doctor','name','age','gender','dob','contact','email','desc')
+    list_display = ('name','date','time','doctor','age','gender','dob','contact','email','desc')
     list_filter = ("doctor","date","time")
 admin.site.register(Patient, AdminPatient)
 

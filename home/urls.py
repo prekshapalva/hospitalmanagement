@@ -3,11 +3,10 @@ from django.urls import path
 from home import views
 from django.conf.urls import url
 from . import views
-
 # Django admin customization
-admin.site.site_title = "Admin site for Hospital Management"
-admin.site.site_header = "Hopitalmanagement - Admin Dashboard"
-admin.site.index_title = "Hopitalmanagement - Admin Dashboard"
+admin.site.site_title = "Hospital ABC "
+admin.site.site_header = "Hopitalmanagement - Dashboard"
+admin.site.index_title = "Hopitalmanagement - Dashboard"
 
 # Paths for each attribute
 urlpatterns = [
@@ -20,5 +19,7 @@ urlpatterns = [
     path('payment', views.payment, name='payment'),
     path('patient_appointment', views.patient_appointment, name='patient_appointment'),
     path('register', views.registerPage, name='register'),
-    path('login', views.loginPage, name='login')
+    path('login', views.loginPage, name='login'),
+    #path(‘/<name>/, views.profile, name=‘profile’),
+
 ]
