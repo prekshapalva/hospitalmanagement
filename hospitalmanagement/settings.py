@@ -31,7 +31,7 @@ SECRET_KEY = 'wt&3my$ve&^2m+(b9r&tduw2dg5l7()2!^@$s7l8j63l-91wg!'
 # SECURITY WARNING: don't run with debug turned on in production!
 
 DEBUG = False
-ALLOWED_HOSTS = ['hospitalmanagement1911.herokuapp.com', 'localhost', '127.0.0.1'] 
+ALLOWED_HOSTS = ['hospitalmanagement1911.herokuapp.com', 'localhost', '127.0.0.1']
 # Application definition
 
 INSTALLED_APPS = [
